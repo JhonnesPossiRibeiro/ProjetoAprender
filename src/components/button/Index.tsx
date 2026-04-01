@@ -1,17 +1,15 @@
-import { falar } from "../../utils/Falar";
-
 type CardProps = {
   titulo?: string;
-  texto: string;
+  funcao?: () => void;
   css?: string;
   img?: string;
 };
 
-const Card = ({ titulo, texto, css, img }: CardProps) => {
+const Card = ({ titulo,funcao, css, img }: CardProps) => {
   return (
     <div
       className={`card text-center ${css}`}
-      onClick={() => falar(texto)}
+      onClick={funcao}
       style={{ cursor: "pointer" }}
     >
       <div className="card-header">{titulo}</div>

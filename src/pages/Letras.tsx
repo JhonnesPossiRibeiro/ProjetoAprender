@@ -1,5 +1,6 @@
 import Card from "../components/button/Index";
 import Header from "../components/header/Index";
+import { falar } from "../utils/Falar";
 
 export function PageLetras() {
   const letras = [
@@ -7,12 +8,12 @@ export function PageLetras() {
     { l: "B", texto: "B de Bola", imagem:"./Bola.png" },
     { l: "C", texto: "C de Cachorro", imagem:"./Cachorro.png" },
     { l: "D", texto: "D de Dado", imagem:"./Dado.png" },
-    { l: "E", texto: "E de Elefante", imagem:"./Elefante.png" },
-    { l: "F", texto: "F de Foca 🦭", imagem:"./Foca.png" },
-    { l: "G", texto: "G de Gato 🐱", imagem:"./Gato.png" },
-    { l: "H", texto: "H de Hipopótamo 🦛", imagem:"./Hipopótamo.png" },
-    { l: "I", texto: "I de Igreja ⛪", imagem:"./Igreja.png" },
-    { l: "J", texto: "J de Jacaré 🐊", imagem:"./Jacaré.png" },
+    { l: "E", texto: "É de Elefante", imagem:"./Elefante.png" },
+    { l: "F", texto: "F de Foca", imagem:"./Foca.png" },
+    { l: "G", texto: "G de Gato", imagem:"./Gato.png" },
+    { l: "H", texto: "H de Hipopótamo 🦛", imagem:"./Hipopotamo.png" },
+    { l: "I", texto: "I de Ilha", imagem:"./Ilha.png" },
+    { l: "J", texto: "J de Jacaré", imagem:"./Jacare.png" },
     { l: "K", texto: "K de Kiwi 🥝", imagem:"./Kiwi.png" },
     { l: "L", texto: "L de Leão 🦁", imagem:"./Leão.png" },
     { l: "M", texto: "M de Macaco 🐵", imagem:"./Macaco.png" },
@@ -44,7 +45,7 @@ export function PageLetras() {
           <div key={item.l} className="col-6 col-md-3 col-lg-2">
             <Card
               titulo={`${item.l} ${item.l.toLowerCase()}`}
-              texto={`${item.texto}`}
+              funcao={() => falar(item.texto)}
               img={item.imagem} // você pode trocar depois
             />
           </div>
