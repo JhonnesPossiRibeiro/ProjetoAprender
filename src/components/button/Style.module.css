@@ -1,0 +1,8 @@
+.card-float {
+  transition: all 0.25s ease;
+}
+
+.card-float:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.12);
+}

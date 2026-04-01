@@ -7,7 +7,7 @@ export function PagePalavras (){
     <>
     <Header>Palavras</Header>
     <button onClick={() => falar("Abelha")}>Abelha</button>
-    <button onClick={() => falarSilabas(["A","be","lha"])}>A-be-lha</button>
+    <button onClick={() => falarSilabas(["A","bê","lha"])}>A-be-lha</button>
     </>
   )
 }
