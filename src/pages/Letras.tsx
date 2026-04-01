@@ -12,7 +12,7 @@ export function PageLetras() {
     { l: "F", texto: "F de Foca", imagem:"./Foca.png" },
     { l: "G", texto: "G de Gato", imagem:"./Gato.png" },
     { l: "H", texto: "H de Hipopótamo", imagem:"./Hipopotamo.png" },
-    { l: "I", texto: "Í de Ilha", imagem:"./Ilha.png" },
+    { l: "I", texto: "í de Ilha", imagem:"./Ilha.png" },
     { l: "J", texto: "J de Jacaré", imagem:"./Jacare.png" },
     { l: "K", texto: "K de Kiwi 🥝", imagem:"./Kiwi.png" },
     { l: "L", texto: "L de Leão 🦁", imagem:"./Leão.png" },
