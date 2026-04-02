@@ -10,7 +10,7 @@ const Card = ({ titulo,funcao, css, img }: CardProps) => {
     <div
       className={`card text-center ${css}`}
       onClick={funcao}
-      style={{ cursor: "pointer" }}
+      style={{ cursor: "pointer", fontSize: "50px" }}
     >
       <div className="card-header">{titulo}</div>
       <div
@@ -21,7 +21,7 @@ const Card = ({ titulo,funcao, css, img }: CardProps) => {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           width: "100%",
-          height: "250px",
+          height: "500px",
         }}
       ></div>
     </div>

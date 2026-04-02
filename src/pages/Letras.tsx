@@ -1,4 +1,4 @@
-import Card from "../components/button/Index";
+import Card from "../components/card/Index";
 import Header from "../components/header/Index";
 import { falar } from "../utils/Falar";
 
@@ -42,11 +42,11 @@ export function PageLetras() {
 
       <div className="row g-3 m-2">
         {letras.map((item) => (
-          <div key={item.l} className="col-6 col-md-3 col-lg-2">
+          <div key={item.l} className="col-sm-6 col-md-4 col-lg-2">
             <Card
               titulo={`${item.l} ${item.l.toLowerCase()}`}
               funcao={() => falar(item.texto)}
-              img={item.imagem} // você pode trocar depois
+              img={item.imagem} 
             />
           </div>
         ))}

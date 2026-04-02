@@ -1,4 +1,4 @@
-import Card from "../components/button/Index";
+import Card from "../components/card/Index";
 import Header from "../components/header/Index";
 import { falarSilabas } from "../utils/FalarSilabas";
 
