@@ -27,7 +27,7 @@ export function PageLetras() {
     { l: "U", texto: "U de Urso", imagem:"./Urso.png" },
     { l: "V", texto: "V de Vaca", imagem:"./Vaca.png" },
     { l: "W", texto: "W de Wifi", imagem:"./Wifi.png" },
-    { l: "X", texto: "X de Xícara", imagem:"./Xícara.png" },
+    { l: "X", texto: "X de Xícara", imagem:"./Xicara.png" },
     { l: "Y", texto: "Y de YouTube", imagem:"./YouTube.png" },
     { l: "Z", texto: "Z de Zebra", imagem:"./Zebra.png" },
   ];
