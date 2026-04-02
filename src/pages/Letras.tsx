@@ -21,14 +21,14 @@ export function PageLetras() {
     { l: "O", texto: "O de Óculos", imagem:"./Oculos.png" },
     { l: "P", texto: "P de Pato", imagem:"./Pato.png" },
     { l: "Q", texto: "Q de Queijo", imagem:"./Queijo.png" },
-    { l: "R", texto: "R de Rato 🐭", imagem:"./Rato.png" },
+    { l: "R", texto: "R de Rato", imagem:"./Rato.png" },
     { l: "S", texto: "S de Sapo", imagem:"./Sapo.png" },
     { l: "T", texto: "T de Tigre", imagem:"./Tigre.png" },
     { l: "U", texto: "U de Urso", imagem:"./Urso.png" },
     { l: "V", texto: "V de Vaca", imagem:"./Vaca.png" },
-    { l: "W", texto: "W de Web 🌐", imagem:"./Web.png" },
+    { l: "W", texto: "W de Wifi", imagem:"./Wifi.png" },
     { l: "X", texto: "X de Xícara", imagem:"./Xícara.png" },
-    { l: "Y", texto: "Y de Yoga", imagem:"./Yoga.png" },
+    { l: "Y", texto: "Y de YouTube", imagem:"./YouTube.png" },
     { l: "Z", texto: "Z de Zebra", imagem:"./Zebra.png" },
   ];
 
