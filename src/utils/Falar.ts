@@ -3,9 +3,7 @@ export function falar(texto: string) {
 
   const vozes = window.speechSynthesis.getVoices();
 
-  const voz = vozes.find((v) =>
-    v.name.includes("Maria")
-  );
+  const voz = vozes.find((v) => v.name.includes("Maria"));
 
   if (voz) msg.voice = voz;
 
@@ -14,4 +12,3 @@ export function falar(texto: string) {
 
   speechSynthesis.speak(msg);
 }
-
