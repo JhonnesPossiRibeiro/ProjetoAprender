@@ -6,3 +6,8 @@
   transform: translateY(-6px) scale(1.01);
   box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.12);
 }
+
+.card-col-lg-2 {
+  flex: 0 0 auto;
+  width: 20%!important;
+}

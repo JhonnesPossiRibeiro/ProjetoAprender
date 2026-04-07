@@ -5,7 +5,7 @@ type CardProps = {
   img?: string;
 };
 
-const Card = ({ titulo,funcao, css, img }: CardProps) => {
+export const CardLetras = ({ titulo,funcao, css, img }: CardProps) => {
   return (
     <div
       className={`card text-center ${css}`}
@@ -28,4 +28,26 @@ const Card = ({ titulo,funcao, css, img }: CardProps) => {
   );
 };
 
-export default Card;
+export const CardSilabas = ({ titulo,funcao, css, img }: CardProps) => {
+  return (
+    <div
+      className={`card text-center ${css}`}
+      onClick={funcao}
+      style={{ cursor: "pointer", fontSize: "50px" }}
+    >
+      <div className="card-header">{titulo}</div>
+      <div
+        className="card-body"
+        style={{
+          backgroundImage: `url(${img})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          width: "100%",
+          height: "250px",
+        }}
+      ></div>
+    </div>
+  );
+};
+
