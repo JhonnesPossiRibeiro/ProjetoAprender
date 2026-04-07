@@ -21,7 +21,7 @@ export const CardLetras = ({ titulo,funcao, css, img }: CardProps) => {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           width: "100%",
-          height: "500px",
+          height: "300px",
         }}
       ></div>
     </div>
