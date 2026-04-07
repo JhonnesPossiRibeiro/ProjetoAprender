@@ -36,7 +36,7 @@ export function PageSilabas() {
     { familia: "G",  l: "GE", texto: "Gê", imagem:"./silabas/Geladeira.png" },
     { familia: "G",  l: "GI", texto: "Gí", imagem:"./silabas/Girafa.png" },
     { familia: "G",  l: "GO", texto: "Gó", imagem:"./silabas/Goiaba.png" },
-    { familia: "G",  l: "GU", texto: "Gú", imagem:"./silabas/Guerra.png" },
+    { familia: "G",  l: "GU", texto: "Gú", imagem:"./silabas/Gude.png" },
     { familia: "L",  l: "LA", texto: "Lá", imagem:"./letras/Laranja.png" },
     { familia: "L",  l: "LE", texto: "Lê", imagem:"" },
     { familia: "L",  l: "LI", texto: "Lí", imagem:"" },
