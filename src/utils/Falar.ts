@@ -1,14 +1,28 @@
 export function falar(texto: string) {
-  const msg = new SpeechSynthesisUtterance(texto);
+  const synth = window.speechSynthesis;
 
-  const vozes = window.speechSynthesis.getVoices();
+  const falarAgora = () => {
+    const vozes = synth.getVoices();
 
-  const voz = vozes.find((v) => v.name.includes("Maria"));
+    // tenta achar uma voz pt-BR
+    const voz =
+      vozes.find(v => v.lang === "pt-BR") ||
+      vozes.find(v => v.lang.includes("pt"));
 
-  if (voz) msg.voice = voz;
+    const utterance = new SpeechSynthesisUtterance(texto);
 
-  msg.lang = "pt-BR";
-  msg.rate = 0.8;
+    if (voz) utterance.voice = voz;
 
-  speechSynthesis.speak(msg);
+    utterance.lang = "pt-BR";
+    utterance.rate = 0.8;
+
+    synth.speak(utterance);
+  };
+
+  // resolve problema de vozes não carregadas
+  if (synth.getVoices().length === 0) {
+    synth.onvoiceschanged = falarAgora;
+  } else {
+    falarAgora();
+  }
 }

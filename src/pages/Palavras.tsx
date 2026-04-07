@@ -2,9 +2,14 @@ import Header from "../components/header/Index";
 import { falar } from "../utils/Falar";
 import { falarSilabas } from "../utils/FalarSilabas";
 
-export function PagePalavras() {
+type Palavra = {
+  familia: string;
+  palavra: string;
+  silabas: string[];
+};
 
-  const palavras = [
+export function PagePalavras() {
+  const palavras: Palavra[] = [
     { familia: "A", palavra: "Abelha", silabas: ["A","be","lha"] },
     { familia: "B", palavra: "Bola", silabas: ["Bo","la"] },
     { familia: "C", palavra: "Casa", silabas: ["Ca","sa"] },
@@ -33,16 +38,8 @@ export function PagePalavras() {
     { familia: "Z", palavra: "Zebra", silabas: ["Ze","bra"] },
   ];
 
-  // Agrupar por família
-  const agrupado = palavras.reduce((acc, item) => {
-    if (!acc[item.familia]) {
-      acc[item.familia] = [];
-    }
-    acc[item.familia].push(item);
-    return acc;
-  }, {});
-
-  const familias = palavras.reduce((acc, item) => {
+  // ✅ agrupamento tipado (somente 1 vez)
+  const familias = palavras.reduce<Record<string, Palavra[]>>((acc, item) => {
     if (!acc[item.familia]) {
       acc[item.familia] = [];
     }
@@ -55,28 +52,39 @@ export function PagePalavras() {
       <Header>Palavras</Header>
 
       <div className="alert alert-info text-center fw-semibold">
-        🌈 Vamos aprender as palavras! Clique nas imagens e escute o som 🎵
+        🌈 Vamos aprender as palavras! Clique para ouvir 🎵
       </div>
+
       <div className="container">
         {Object.keys(familias).map((familia) => (
           <div key={familia} className="mb-4">
-            
+
             {/* 🔹 ALERTA DA FAMÍLIA */}
             <div className="alert alert-primary text-center fw-bold">
               Família {familia}
             </div>
 
-            {/* 🔹 SÍLABAS */}
+            {/* 🔹 PALAVRAS */}
             <div className="row g-3">
               {familias[familia].map((item) => (
-                <div key={item.familia} className="col-sm-6 col-md-4 col-lg-2">
-                  <button onClick={() => falar(item.palavra)}>
-                {item.palavra}
-              </button>
+                <div key={item.palavra} className="col-sm-6 col-md-4 col-lg-2">
 
-              <button onClick={() => falarSilabas(item.silabas)}>
-                {item.silabas.join("-")}
-              </button>
+                  {/* 🔊 Palavra */}
+                  <button
+                    className="btn btn-success w-100 mb-2"
+                    onClick={() => falar(item.palavra)}
+                  >
+                    {item.palavra}
+                  </button>
+
+                  {/* 🔊 Sílabas */}
+                  <button
+                    className="btn btn-outline-primary w-100"
+                    onClick={() => falarSilabas(item.silabas)}
+                  >
+                    {item.silabas.join("-")}
+                  </button>
+
                 </div>
               ))}
             </div>
@@ -84,7 +92,6 @@ export function PagePalavras() {
           </div>
         ))}
       </div>
-      
     </>
   );
 }
