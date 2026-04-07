@@ -15,7 +15,7 @@ export function PageLetras() {
     { l: "H", texto: "H de Hipopótamo", imagem: "./letras/Hipopotamo.png" },
     { l: "I", texto: "I...de...ilha", imagem: "./letras/Ilha.png" },
     { l: "J", texto: "J de Jacaré", imagem: "./letras/Jacare.png" },
-    { l: "K", texto: "K de Kiwi", imagem: "./letras/Kiwi.png" },
+    { l: "K", texto: "K de Kiúi", imagem: "./letras/Kiwi.png" },
     { l: "L", texto: "L de Leão", imagem: "./letras/Leao.png" },
     { l: "M", texto: "M de Macaco", imagem: "./letras/Macaco.png" },
     { l: "N", texto: "N de Navio", imagem: "./letras/Navio.png" },
