@@ -28,7 +28,7 @@ export function PageLetras() {
     { l: "V", texto: "V de Vaca", imagem:"./letras/Vaca.png" },
     { l: "W", texto: "W de UaiFai", imagem:"./letras/Wifi.png" },
     { l: "X", texto: "X de Xícara", imagem:"./letras/Xicara.png" },
-    { l: "Y", texto: "Y de íu...Tube", imagem:"./letras/Youtube.png" },
+    { l: "Y", texto: "Ipissulom de íú...Tube", imagem:"./letras/Youtube.png" },
     { l: "Z", texto: "Z de Zebra", imagem:"./letras/Zebra.png" },
   ];
 
