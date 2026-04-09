@@ -53,7 +53,7 @@ export function PageSilabas() {
     { familia: "K",  l: "KA", texto: "Ká de karaokê", imagem:"./silabas/Karaoke.png" },
     { familia: "K",  l: "KE", texto: "Kê de kebab", imagem:"./silabas/Kebab.png" },
     { familia: "K",  l: "KI", texto: "Kí de Kiúi", imagem:"./letras/Kiwi.png" },
-    { familia: "K",  l: "KO", texto: "Kó de kokô", imagem:"./silabas/Koko.png" },
+    { familia: "K",  l: "KO", texto: "Kó de Kombi", imagem:"./silabas/Kombi.png" },
     { familia: "K",  l: "KU", texto: "Kú de kubo", imagem:"./silabas/Kubo.png" },
     { familia: "L",  l: "LA", texto: "Lá de laranja", imagem:"./silabas/Laranja.png" },
     { familia: "L",  l: "LE", texto: "Lê de leão", imagem:"./letras/Leao.png" },
