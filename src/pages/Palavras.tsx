@@ -242,7 +242,7 @@ export function PagePalavras() {
 
             {/* 🔹 ALERTA DA FAMÍLIA */}
             <div className="alert alert-primary text-center fw-bold">
-              Família {familia}
+              Com {familia}
             </div>
 
             {/* 🔹 PALAVRAS */}
