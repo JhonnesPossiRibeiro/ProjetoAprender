@@ -87,7 +87,7 @@ export function PageSilabas() {
     { familia: "S",  l: "SE", texto: "Sê de séta", imagem:"./silabas/Seta.png" },
     { familia: "S",  l: "SI", texto: "Sí de siri", imagem:"./silabas/Siri.png" },
     { familia: "S",  l: "SO", texto: "Só de sol", imagem:"./silabas/Sol.png" },
-    { familia: "S",  l: "SU", texto: "Sú de suco", imagem:"./silabas/Suco.png" },
+    { familia: "S",  l: "SU", texto: "Sú...de suco", imagem:"./silabas/Suco.png" },
     { familia: "T",  l: "TA", texto: "Tá de tatu", imagem:"./silabas/Tatu.png" },
     { familia: "T",  l: "TE", texto: "Tê de tênis", imagem:"./silabas/Tenis.png" },
     { familia: "T",  l: "TI", texto: "Tí de tigre", imagem:"./letras/Tigre.png" },
