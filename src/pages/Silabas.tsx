@@ -46,7 +46,7 @@ export function PageSilabas() {
     { familia: "H",  l: "HO", texto: "Hó de hotel", imagem:"./silabas/Hotel.png" },
     { familia: "H",  l: "HU", texto: "Hú de húmus", imagem:"./silabas/Humus.png" },
     { familia: "J",  l: "JA", texto: "Já de jacaré", imagem:"./letras/Jacare.png" },
-    { familia: "J",  l: "JE", texto: "Jê de jerusalem", imagem:"./silabas/Jerusalem.png" },
+    { familia: "J",  l: "JE", texto: "Jê de Jesus", imagem:"./silabas/Jesus.png" },
     { familia: "J",  l: "JI", texto: "Jí de jiló", imagem:"./silabas/Jilo.png" },
     { familia: "J",  l: "JO", texto: "Jó de joaninha", imagem:"./silabas/Joaninha.png" },
     { familia: "J",  l: "JU", texto: "Jú de jugo", imagem:"./silabas/Jugo.png" },
