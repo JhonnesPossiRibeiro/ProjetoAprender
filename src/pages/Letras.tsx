@@ -63,7 +63,7 @@ export function PageLetras() {
           >
             <ModalApresentacao
               titulo="🌈 Bem-vindo amigo!"
-              texto="O objetivo deste site é incentivar o aprendizado de forma lúdica e divertida 🎵"
+              texto="O objetivo deste site é incentivar o aprendizado de forma lúdica e divertida 🎵. Iremos ver primeiro as letras do alfabeto!"
               img="./letras/Abelha.png"
               personagem=""
               funcao={fecharModal}
