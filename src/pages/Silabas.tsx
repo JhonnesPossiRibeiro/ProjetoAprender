@@ -69,7 +69,7 @@ export function PageSilabas() {
     { familia: "R",  l: "RO", texto: "Ró de roda", imagem:"./silabas/Roda.png" },
     { familia: "R",  l: "RU", texto: "Rú de Rúa", imagem:"./silabas/Rua.png" },
     { familia: "S",  l: "SA", texto: "Sá de sapo", imagem:"./letras/Sapo.png" },
-    { familia: "S",  l: "SE", texto: "Sê de seta", imagem:"./silabas/Seta.png" },
+    { familia: "S",  l: "SE", texto: "Sê de séta", imagem:"./silabas/Seta.png" },
     { familia: "S",  l: "SI", texto: "Sí de siri", imagem:"./silabas/Siri.png" },
     { familia: "S",  l: "SO", texto: "Só de sol", imagem:"./silabas/Sol.png" },
     { familia: "S",  l: "SU", texto: "Sú de suco", imagem:"./silabas/Suco.png" },
