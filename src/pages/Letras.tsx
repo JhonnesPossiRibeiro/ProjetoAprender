@@ -31,7 +31,7 @@ export function PageLetras() {
     { l: "X", texto: "X de Xícara", imagem: "./letras/Xicara.png" },
     {
       l: "Y",
-      texto: "Ipissulómm de íú...Tube",
+      texto: "ípsilon de íúTube",
       imagem: "./letras/Youtube.png",
     },
     { l: "Z", texto: "Z de Zebra", imagem: "./letras/Zebra.png" },
