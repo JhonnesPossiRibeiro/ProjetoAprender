@@ -62,7 +62,7 @@ export function PageLetras() {
             }}
           >
             <ModalApresentacao
-              titulo="🌈 Bem-vindo, Amigo!"
+              titulo="🌈 Bem-vindo amigo!"
               texto="O objetivo deste site é incentivar o aprendizado de forma lúdica e divertida 🎵"
               img="./letras/Abelha.png"
               personagem=""
