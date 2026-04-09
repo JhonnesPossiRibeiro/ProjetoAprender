@@ -2,8 +2,20 @@ import { CardLetras } from "../components/card/Index";
 import Header from "../components/header/Index";
 import { falar } from "../utils/Falar";
 import style from "../components/card/Style.module.css";
+import { ModalApresentacao } from "../components/modal/Index";
+import { useState } from "react";
 
 export function PageLetras() {
+  const [mostrarModal, setMostrarModal] = useState(() => {
+    const jaViu = localStorage.getItem("viuModal");
+    return !jaViu;
+  });
+
+  const fecharModal = () => {
+    localStorage.setItem("viuModal", "true");
+    setMostrarModal(false);
+  };
+
   const letras = [
     { l: "A", texto: "A de Abelha", imagem: "./letras/Abelha.png" },
     { l: "B", texto: "B de Bola", imagem: "./letras/Bola.png" },
@@ -39,6 +51,27 @@ export function PageLetras() {
 
   return (
     <>
+      {/* ✅ MODAL */}
+      {mostrarModal && (
+        <div className="modal-overlay" onClick={fecharModal}>
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              maxWidth: "500px",
+              width: "90%",
+            }}
+          >
+            <ModalApresentacao
+              titulo="🌈 Bem-vindo, Amigo!"
+              texto="O objetivo deste site é incentivar o aprendizado de forma lúdica e divertida 🎵"
+              img="./letras/Abelha.png"
+              personagem=""
+              funcao={fecharModal}
+            />
+          </div>
+        </div>
+      )}
+
       <Header>Alfabeto</Header>
 
       <div className="alert alert-info text-center fw-semibold">
@@ -48,7 +81,10 @@ export function PageLetras() {
       <div className="container">
         <div className="row g-3 m-2">
           {letras.map((item) => (
-            <div key={item.l} className={`col-sm-6 col-md-4 ${style['card-col-lg-2']}`}>
+            <div
+              key={item.l}
+              className={`col-sm-6 col-md-4 ${style["card-col-lg-2"]}`}
+            >
               <CardLetras
                 titulo={`${item.l} ${item.l.toLowerCase()}`}
                 funcao={() => falar(item.texto)}
