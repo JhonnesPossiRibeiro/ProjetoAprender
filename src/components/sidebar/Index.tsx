@@ -3,20 +3,36 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { Home, Type, BookOpen } from "lucide-react";
 import styles from "./Style.module.css";
 
-export default function Sidebar() {
+type MenuItem = {
+  label: string;
+  path: string;
+  icone: string;
+  submenus: MenuItem[];
+};
+
+type SidebarProps = {
+  menus: MenuItem[];
+  onExpandChange: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+export default function Sidebar({ menus, onExpandChange }: SidebarProps) {
   const [isMobile, setIsMobile] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
+      const mobile = window.innerWidth <= 768;
+      setIsMobile(mobile);
+
+      // 🔥 informa o layout (expandido ou não)
+      onExpandChange(!mobile);
     };
 
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [onExpandChange]);
 
   const currentPath = location.pathname.toLowerCase();
 
@@ -25,60 +41,50 @@ export default function Sidebar() {
     return currentPath.includes(path.toLowerCase());
   };
 
+  const getIcon = (icone: string) => {
+    switch (icone) {
+      case "L":
+        return <Home size={18} />;
+      case "S":
+        return <Type size={18} />;
+      case "P":
+        return <BookOpen size={18} />;
+      default:
+        return null;
+    }
+  };
+
+  // 📱 MOBILE (bottom menu)
   if (isMobile) {
     return (
       <div className={styles.bottomMenu}>
-        <button
-          className={isActive("/") ? styles.active : ""}
-          onClick={() => navigate("/")}
-        >
-          <Home size={18} />
-          <span>Letras</span>
-        </button>
-
-        <button
-          className={isActive("silabas") ? styles.active : ""}
-          onClick={() => navigate("/Silabas")}
-        >
-          <Type size={18} />
-          <span>Silabas</span>
-        </button>
-
-        <button
-          className={isActive("palavras") ? styles.active : ""}
-          onClick={() => navigate("/Palavras")}
-        >
-          <BookOpen size={18} />
-          <span>Palavras</span>
-        </button>
+        {menus.map((menu, index) => (
+          <button
+            key={index}
+            className={isActive(menu.path) ? styles.active : ""}
+            onClick={() => navigate(menu.path)}
+          >
+            {getIcon(menu.icone)}
+            <span>{menu.label}</span>
+          </button>
+        ))}
       </div>
     );
   }
 
-  // Desktop
+  // 💻 DESKTOP (sidebar)
   return (
     <aside className={styles.sidebar}>
       <ul>
-        <li
-          className={isActive("/") ? styles.active : ""}
-          onClick={() => navigate("/")}
-        >
-          Letras
-        </li>
-
-        <li
-          className={isActive("silabas") ? styles.active : ""}
-          onClick={() => navigate("/Silabas")}
-        >
-          Silabas
-        </li>
-
-        <li
-          className={isActive("palavras") ? styles.active : ""}
-          onClick={() => navigate("/Palavras")}
-        >
-          Palavras
-        </li>
+        {menus.map((menu, index) => (
+          <li
+            key={index}
+            className={isActive(menu.path) ? styles.active : ""}
+            onClick={() => navigate(menu.path)}
+          >
+            {menu.label}
+          </li>
+        ))}
       </ul>
     </aside>
   );
