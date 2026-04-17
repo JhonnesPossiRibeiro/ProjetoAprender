@@ -112,7 +112,7 @@ export function PageSilabas() {
     { familia: "Z",  l: "ZE", texto: "Zê de zebra", imagem:"./letras/Zebra.png" },
     { familia: "Z",  l: "ZI", texto: "Zí de zico", imagem:"./silabas/Zico.png" },
     { familia: "Z",  l: "ZO", texto: "Zó de zorro", imagem:"./silabas/Zorro.png" },
-    { familia: "Z",  l: "ZU", texto: "Zú de zumbi", imagem:"./silabas/Zumbi.png" },
+    { familia: "Z",  l: "ZU", texto: "Zú de zumba", imagem:"./silabas/Zumba.png" },
   ];
 
    // ✅ tipado corretamente
